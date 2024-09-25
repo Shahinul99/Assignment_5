@@ -1,21 +1,35 @@
 
 
-document.getElementById('btn-donate')
-    .addEventListener('click', function(event){
-        event.preventDefault();
-        
+document.getElementById('add-money-button', ).addEventListener('click', function( event) {
 
-        const newAmount = document.getElementById('Amount').value ;
-        console.log('newAmount');
+    event.preventDefault();
+
+    const donationInput = document.getElementById('donation-amount').value;
+    
 
 
-        if (NewAmount === '100'){
-            console.log ('you added Amount');
-            window.location.href = '/home.html';
-        }
-        else {
-            alert('plz only Amount');
-        }
+    const donationAmount = parseFloat(donationInput);
 
-})
+
+    const balanceElement = document.getElementById('account-balance');
+    const currentBalance = parseFloat(balanceElement.innerText);
+
+
+    if (donationAmount > 0) {
+
+        const newBalance = currentBalance + donationAmount;
+        balanceElement.innerText = newBalance;
+        alert ("you have donate successfully, thank you ")
+    } else {
+        alert("Please enter a valid amount.");
+    }
+
+    document.getElementById('homeBtn').onclick = function() {
+        window.location.href = 'index.html'; 
+    };
+    
+    document.getElementById('blogBtn').onclick = function() {
+        window.location.href = 'blog.html'; 
+    };
+});
 
