@@ -1,4 +1,3 @@
-
 .lexend-normal {
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
@@ -7,24 +6,37 @@
 .sticky {
     position: sticky;
     top: 0;
-    background-color:rgb(0,0,0);
-    color: white;
-    padding: 10px;
-    
-    
-}
+    background-color: rgb(0, 0, 0);
+};
+
+/* .x {
+    position: relative;
+} */
 
 .color {
-    color:black;
-}
-    
+    color: black;
+    /* position: absolute */
 
+};
 
 .button {
     padding: 20px 20px;
-    font-size: 16px;
-    color: #fff;
+    font-size: 20px;
+    color: black;
     text-decoration: none;
-    background-color: #3922e0;
+    background-color: #311ec2;
     border-radius: 20px;
+};
+
+.ddd {
+    color: rgb(218, 119, 32)
+};
+
+.y{
+    background-color: white;
+    color: black;
+}
+
+.y:hover {
+    background-color: #311ec2;
 }

@@ -1,35 +1,35 @@
 
 
-document.getElementById('add-money-button', ).addEventListener('click', function( event) {
-
-    event.preventDefault();
+document.getElementById('add-money-button', ).addEventListener('click', function(event) {
+    event.preventDefault()
 
     const donationInput = document.getElementById('donation-amount').value;
-    
+    const donationAmount = parseFloat(donationInput)
 
+    const cashOut = document.getElementById('donation-amount').value;
+    const cashOutAmount = parseFloat('cash-out')
 
-    const donationAmount = parseFloat(donationInput);
-
-
-    const balanceElement = document.getElementById('account-balance');
-    const currentBalance = parseFloat(balanceElement.innerText);
-
+    const balanceElement = document.getElementById('account-balance') 
+    const currentBalance = parseFloat(balanceElement.innerText)
 
     if (donationAmount > 0) {
+        const newBalance = currentBalance + donationAmount
+        balanceElement.innerText = newBalance.toFixed(2);
 
-        const newBalance = currentBalance + donationAmount;
-        balanceElement.innerText = newBalance;
-        alert ("you have donate successfully, thank you ")
+        alert ("you have donate successfully, thank you ");
     } else {
         alert("Please enter a valid amount.");
     }
 
-    document.getElementById('homeBtn').onclick = function() {
-        window.location.href = 'index.html'; 
-    };
-    
-    document.getElementById('blogBtn').onclick = function() {
-        window.location.href = 'blog.html'; 
-    };
+    function showSectionById (id){
+        document.getElementById('show-add-money-form').classList.add('hidden')
+        document.getElementById('history-form').classList.add('hidden')
+    }
+    document.getElementById(id).classList.remove('hidden');
+
+    const p = document.createElement('p');
+    p.innerText= `Added : ${ donationAmount } Tk.new balance: ${ newBalance }` ;
+
+    document.getElementById('t-container').appendChild('p');
 });
 

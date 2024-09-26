@@ -1,15 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog pages</title>
+    
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisy ui cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font icon  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="lexend-normal">
-    <a href="index.html" class="button">Home Page</a>
+    <navbar class="container mx-auto">
+        <nav class="max-w-screen mx-auto">
+            <div class="navbar bg-slate-100 ">
+                <div class="navbar-start">
+                    <a href="index.html" class="button">Home Page</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="font-bold text-2xl color"><img src="./pic/./logo.png" alt="">Donate Bangladesh</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar-end font-bold">
+                    <img src="./pic/coin.png" alt="coin" class="w-5 h-5 mr-2">
+                    <span id="cash-out " class="color">5500 BDT</span>
+                </div>
+            </div>
+        </nav>
+    </navbar>
+    <section>
+        <div class="bg-gray-100 flex items-center justify-center min-h-screen">
+            <div class="max-w-2xl rounded-lg shadow-lg p-6 space-y-4">
+                <h2 class="text-2xl font-bold mb-4 flex items-center">
+                    Important FAQ<i class="fa-solid fa-question"></i>
+                </h2>
 
+                <div class="space-y-4">
+                    <div class="card shadow-md bg-base-100 p-4 border">
+                        <div class="card-body">
+                            <h3 class="card-title font-semibold">What is the Document Object Model (DOM)?</h3>
+                            <p>The Document Object Model (DOM) is a programming interface for web
+                                documents. It represents the structure of a webpage as a tree of objects. Each element
+                                on
+                                the webpage, such as paragraphs, headers, images, and links, is represented as a node in
+                                this tree. This structure allows programming languages, like JavaScript, to manipulate,
+                                interact with, and update the content, structure, and style of a webpage dynamically
+                                without
+                                reloading the entire page.</p>
+                        </div>
+                    </div>
 
+                    <div class="card shadow-md bg-base-100 p-4 border">
+                        <div class="card-body">
+                            <h3 class="card-title font-semibold">How do you select an element from the DOM?</h3>
+                            <p>Use getElementById for unique IDs.
+                                Use getElementsByClassName or querySelectorAll for classes or tags.
+                                Use querySelector for a single element with complex CSS selectors.
+                                These methods allow you to interact with and manipulate elements on the page
+                                dynamically.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="card shadow-md bg-base-100 p-4 border">
+                        <div class="card-body">
+                            <h3 class="card-title font-semibold">What is event delegation in the context of the DOM, and
+                                why
+                                is it useful?</h3>
+                            <p>
+                                Event delegation is a technique in JavaScript that allows you to add a single event
+                                listener
+                                to a parent element instead of adding multiple event listeners to individual child
+                                elements.
+                                This is particularly useful when you have many child elements that require similar
+                                behavior
+                                or when you have dynamically added elements that need to respond to events.</p>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-md bg-base-100 p-4 border">
+                        <div class="card-body">
+                            <h3 class="card-title font-semibold">How do you manipulate an element's attributes and
+                                styles
+                                using the DOM?</h3>
+                            <p><span class="ddd">Attributes</span>
+                                Get: element.getAttribute("attributeName")
+                                Set: element.setAttribute("attributeName", "value")
+                                Remove: element.removeAttribute("attributeName")
+                                <br>
+                                <span class="ddd">Styles</span>
+                                Set: element.style.property = "value"
+                                Get (inline styles): element.style.property
+                                Get (computed styles): window.getComputedStyle(element).property
+                                Remove: element.style.property = ""
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <script src="./index.js"></script>
 </body>
+
 </html>

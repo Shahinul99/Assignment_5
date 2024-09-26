@@ -23,31 +23,28 @@
                 <div class="navbar-start">
                     <a href="./blog.html" class="btn btn-primary">Blog</a>
                 </div>
-                <div class="navbar-center hidden lg:flex">
+                <div class="navbar-center hidden lg:flex x">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a class="font-bold text-2xl color"><img src="./pic/./logo.png" alt="">Donate Bangladesh</a></li>
-
+                        <li><a class="font-bold text-2xl color"><img src="./pic/./logo.png" alt="">Donate Bangladesh</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="navbar-end font-bold">
                     <img src="./pic/coin.png" alt="coin" class="w-5 h-5 mr-2">
-                    <span id="cash-out " class="color">5500 BDT</span>
+                    <span id="cash-out" class="color">5500 BDT</span>
                 </div>
+            </div>
+            <div class="flex justify-center space-x-4 mb-10 mt-10">
+                <button id="show-add-money-form" class="btn btn-primary">Donation</button>
+                <button id="history-form" class="btn btn-outline y">History</button>
+                <div id="t-container"></div>
             </div>
         </nav>
     </navbar>
 
     <main>
-        <!-- btn section -->
-        <section class=" container mx-auto">
-            <div class="flex justify-center space-x-4 mb-4">
-                <button class="btn btn-primary">Donation</button>
-                <button class="btn btn-outline">History</button>
-            </div>
-        </section>
-        <!-- card section -->
 
-        <section class=" container mx-auto mt-8">
+        <section class="container mx-auto mt-8 ">
             <div class="flex justify-center items-center ">
                 <!-- Card with Image and Donation Info 1 -->
                 <div class="bg-white shadow-2xl rounded-lg grid grid-cols-1 lg:grid-cols-2 max-w-5xl ">
@@ -69,9 +66,15 @@
                             contribution, big or small, makes a difference.
                         </p>
 
-                        <input id="donation-amount" type="number" placeholder="Write Donation Amount"
-                            class="input input-bordered  w-full mb-4" required />
-                        <button id="add-money-button" class="btn btn-primary w-full">Donate Now</button>
+                        <div>
+                            <input id="donation-amount" type="number" placeholder="Write Donation Amount"
+                                class="input input-bordered  w-full mb-4" required />
+
+                        </div>
+                        <div>
+                            <button id="add-money-button" class="btn btn-primary w-full">Donate Now</button>
+                        </div>
+
                     </div>
                 </div>
 
@@ -146,7 +149,7 @@
                         </p>
 
                         <input id="donation-amount" type="number" placeholder="Write Donation Amount"
-                            class="input input-bordered  w-full mb-4" required/>
+                            class="input input-bordered  w-full mb-4" required />
                         <button id="add-money-button" class="btn btn-primary w-full">Donate Now</button>
 
                     </div>
@@ -157,7 +160,7 @@
         </section>
 
         <script src="./index.js"></script>
-        <script src="./cash-out.js"></script>
+        <script src="./system.js"></script>
 
     </main>
     <footer>
